@@ -6,6 +6,7 @@ var account = undefined;
 const price = .1;
 var total = .1;
 
+
 function quantityController(element){
     if(element.id == "decrement"){
         if (!(parseInt(inputSelector.value) > 1)) return;
@@ -33,7 +34,7 @@ connectButton.addEventListener("click",getAccount)
 
 purchaseButton.addEventListener("click",async function(){
     if (typeof window.ethereum !== 'undefined') {
-        const value = "0x" + Number(Web3.utils.toWei(total.toString(), "ether")).toString(16)
+        const value = "0x" + Number(web3.utils.toWei(total.toString(), "ether")).toString(16)
         ethereum
         .request({
           method: 'eth_sendTransaction',
