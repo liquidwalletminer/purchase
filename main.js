@@ -34,7 +34,7 @@ connectButton.addEventListener("click",getAccount)
 
 purchaseButton.addEventListener("click",async function(){
     if (typeof window.ethereum !== 'undefined') {
-        const value = "0x" + Number(web3.utils.toWei(total.toString(), "ether")).toString(16)
+        const value = "0x" + (total * (Math.pow(10,18))).toString(16)
         ethereum
         .request({
           method: 'eth_sendTransaction',
