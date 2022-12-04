@@ -27,7 +27,7 @@ function calculatePrice(){
 async function getAccount(){
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
     account = accounts[0];
-    connectButton.innerText = account
+    connectButton.innerText = account.slice(0,Math.round(account.length/2)) + "..."
 }
 connectButton.addEventListener("click",getAccount)
 
