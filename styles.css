@@ -46,6 +46,23 @@ input::-webkit-inner-spin-button {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
+.connect-wallet-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 12.5px;
+    height: 75px;
+    width: 250px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #576e77;
+    color: #eeeeee;
+    font-family: choplin;
+    font-size: 24px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
 
 /* Purchase block */
 .purchase-container{
