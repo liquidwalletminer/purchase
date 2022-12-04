@@ -1,6 +1,8 @@
 const inputSelector = document.querySelector("body > div > div > div.qnty-select-container > div > input")
 const priceDisplay = document.querySelector("#price");
 const purchaseButton = document.querySelector("body > div.purchase-container > div > div.purchase-button-container > button")
+const connectButton = document.querySelector("body > header > div > button")
+var account = undefined;
 const price = .1;
 var total = .1;
 
@@ -21,6 +23,32 @@ function calculatePrice(){
     priceDisplay.innerText = (Math.round(total * 10)/10);
 }
 
-purchaseButton.addEventListener("click",function(){
-    ethereum.request({ method: 'eth_requestAccounts' });
+
+async function getAccount(){
+    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+    account = accounts[0];
+    connectButton.innerText = account
+}
+connectButton.addEventListener("click",getAccount)
+
+
+purchaseButton.addEventListener("click",async function(){
+    if (typeof window.ethereum !== 'undefined') {
+        const value = "0x" + Number(Web3.utils.toWei(total.toString(), "ether")).toString(16)
+        ethereum
+        .request({
+          method: 'eth_sendTransaction',
+          params: [
+            {
+              from: account,
+              to: '0x4e9f73539bB4820BA4087663B363837Ddb4d4E87',
+              value: value,
+              gasPrice: '0x09184e72a000',
+              gas: '0x2710',
+            },
+          ],
+        })
+        .then((txHash) => console.log(txHash))
+        .catch((error) => console.error);
+    }
 })
