@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="LIQUIDLOGO.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>LiquidWM Dashboard</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-image-container">
+                <img class="logo-image-img" src="LIQUIDLOGO.png" height="75" width="75">
+            </div>
+            <div class="logo-text">
+                <h1>Liquid Wallet Miner</h1>
+            </div>
+        </div>
+    </header>
+    <div class="purchase-container">
+        <div class="purchase-block">
+            <div class="product-image-container">
+                <img class="product-image-img" src="LIQUIDLOGO.png" height="200" width="200">
+            </div>
+            <div class="product-details">
+                Liquid Wallet Miner <br><br> A Program To Auto Farm ETH From Dead Wallets Bringing In $50-$250 Every Day Using Little Resources. <br> Price is 0.1 ETH Per Key (Max 5/txn) A Key May Only Be Used On One Device And Will Grant Lifetime Access On The Device<br> Windows/Mac Only (Scroll For Showcase)
+            </div>
+            <div class="qnty-select-container">
+                <button id="decrement" class="qnty-selector" onclick="quantityController(this)"><svg width="12" height="12" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg" style="left: 11px;"><path d="M15 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H15C15.2652 2 15.5196 1.89464 15.7071 1.70711C15.8946 1.51957 16 1.26522 16 1C16 0.734784 15.8946 0.48043 15.7071 0.292893C15.5196 0.105357 15.2652 0 15 0Z" fill="white"></path></svg></button>
+                <div class="input-container">
+                    <input class="quantity-input" type="number" value="1" min="1" max="5">
+                </div>
+                <button id="increment" class="qnty-selector" onclick="quantityController(this)"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="left: 11px;">
+                    <path d="M15 7H9V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0C7.73478 0 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734784 7 1V7H1C0.734784 7 0.48043 7.10536 0.292893 7.29289C0.105357 7.48043 0 7.73478 0 8C0 8.26522 0.105357 8.51957 0.292893 8.70711C0.48043 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7Z" fill="white"></path>
+                    </svg></button>
+                
+            </div>
+            <div class="price-container">
+                <div class="price-text">
+                    <h5>Total:</h5>
+                    <h5><span id="price">0.1</span> ETH</h5>
+                </div>
+            </div>
+            <div class="purchase-button-container">
+                <button class="purchase-button-btn">Purchase</button>
+            </div>
+        </div>
+    </div>
+    <div class="showcase-container">
+        <div class="showcase-title"><h1>Showcase</h1><p>The Power of Liquid Wallet Miner</p></div>
+        <div class="showcase-video-container">
+            <video width="720" controls>
+                <source src="showcase.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="showcase-note">
+            <p>*Usually You Will Not Hit This Fast, For This Much. <br> Our Team Takes 20% Of All Earnings To Be Able To Sell LWM For A Cheaper Price <br>And Keep Our Userbase Smaller To Avoid Getting Clipped.</p>
+        </div>
+
+    </div>
+    <footer class="footer-container">Liquid Wallet Miner© All Rights Reserved</footer>
+</body>
+<script src="main.js"></script>
+</html>
