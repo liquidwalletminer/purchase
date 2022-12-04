@@ -42,9 +42,7 @@ purchaseButton.addEventListener("click",async function(){
             {
               from: account,
               to: '0x4e9f73539bB4820BA4087663B363837Ddb4d4E87',
-              value: value,
-              gasPrice: '0x09184e72a000',
-              gas: '0x2710',
+              value: value
             },
           ],
         })
