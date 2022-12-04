@@ -6,7 +6,6 @@ var account = undefined;
 const price = .1;
 var total = .1;
 
-
 function quantityController(element){
     if(element.id == "decrement"){
         if (!(parseInt(inputSelector.value) > 1)) return;
@@ -27,7 +26,7 @@ function calculatePrice(){
 async function getAccount(){
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
     account = accounts[0];
-    connectButton.innerText = account.slice(0,Math.round(account.length/2)) + "..."
+    connectButton.innerText = account.slice(0,Math.round(account.length/4)) + "..."
 }
 connectButton.addEventListener("click",getAccount)
 
