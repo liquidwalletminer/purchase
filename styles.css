@@ -23,7 +23,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
 /* Logo Details */
 .logo-container{
     display: flex;
@@ -59,8 +58,12 @@ input::-webkit-inner-spin-button {
     background-color: #576e77;
     color: #eeeeee;
     font-family: choplin;
-    font-size: 24px;
+    font-size: 32px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.connect-wallet-btn:hover{
+    background-color: #4c6068;
 }
 
 
@@ -101,6 +104,7 @@ input::-webkit-inner-spin-button {
 .qnty-select-container{
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .quantity-input{
     width: 75px;
@@ -124,6 +128,10 @@ input::-webkit-inner-spin-button {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.qnty-selector:hover{
+    background-color: #4c9cb9;
 }
 #decrement{
     border-radius: 5px 0px 0px 5px;
@@ -154,6 +162,10 @@ input::-webkit-inner-spin-button {
     color: #eeeeee;
     font-family: choplin;
     font-size: 24px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.purchase-button-btn:hover{
+    background-color: #4c9cb9;
 }
 
 
